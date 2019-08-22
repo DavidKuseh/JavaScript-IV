@@ -5,61 +5,61 @@
 // 1. Copy and paste your code or the solution from yesterday
 
 //Person
-  // function Person (personName,personAge) {  
-  //   this.name = personName;
-  //   this.age = personAge;
-  //   this.stomach = [];
-  // }
+  function Person (personName,personAge) {  
+    this.name = personName;
+    this.age = personAge;
+    this.stomach = [];
+  }
 
-  // Person.prototype.greet = function () {
-  //   return `Hello, I am ${this.name} and I am ${this.age} years old`;
-  // }
+  Person.prototype.greet = function () {
+    return `Hello, I am ${this.name} and I am ${this.age} years old`;
+  }
 
-  // Person.prototype.eat = function(eatFood) {
-  //   return this.stomach.push(eatFood);
-  // }
+  Person.prototype.eat = function(eatFood) {
+    return this.stomach.push(eatFood);
+  }
   
-  // Person.prototype.poop = function() {
-  //   return this.stomach = [];
-  // }
+  Person.prototype.poop = function() {
+    return this.stomach = [];
+  }
 
 
 // Car
-// function Car (modelName, carMake) {
-//   this.model = modelName;
-//   this.make = carMake;
-//   this.odometer = 0;
-//   carGood = true;
-// }
+function Car (modelName, carMake) {
+  this.model = modelName;
+  this.make = carMake;
+  this.odometer = 0;
+  carGood = true;
+}
 
-// Car.prototype.drive = function(distance) {
-//     if (carGood == true){
-//       return this.odometer += distance;
-//     } 
-//     return `I crashed at ${this.odometer} miles!`;
-// };
+Car.prototype.drive = function(distance) {
+    if (carGood == true){
+      return this.odometer += distance;
+    } 
+    return `I crashed at ${this.odometer} miles!`;
+};
 
-//  Car.prototype.carCrash = function() {
-//        carGood = false;
-//  };
+ Car.prototype.carCrash = function() {
+       carGood = false;
+ };
 
-//  Car.prototype.repairCar = function() {
-//       carGood = true;
-//  };
+ Car.prototype.repairCar = function() {
+      carGood = true;
+ };
 
 
 //  Baby
-//  function Baby(name, age) {
-//     Person.call(this, name, age); 
-//   }
+ function Baby(name, age) {
+    Person.call(this, name, age); 
+  }
 
-//   Baby.prototype = Object.create(Person.prototype);
+  Baby.prototype = Object.create(Person.prototype);
   
-//   Baby.prototype.play = function () {
-//     return `Plays all day`;
-//   }
+  Baby.prototype.play = function () {
+    return `Plays all day`;
+  }
 
-//   var baby = new Baby('Sonny', 2 ); 
+  var baby = new Baby('Sonny', 2 ); 
 
 
 
@@ -129,3 +129,4 @@ class Baby extends Person{
   }
 
 };
+
