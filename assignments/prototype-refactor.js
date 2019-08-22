@@ -23,12 +23,57 @@
   //   return this.stomach = [];
   // }
 
+
+// Car
+// function Car (modelName, carMake) {
+//   this.model = modelName;
+//   this.make = carMake;
+//   this.odometer = 0;
+//   carGood = true;
+// }
+
+// Car.prototype.drive = function(distance) {
+//     if (carGood == true){
+//       return this.odometer += distance;
+//     } 
+//     return `I crashed at ${this.odometer} miles!`;
+// };
+
+//  Car.prototype.carCrash = function() {
+//        carGood = false;
+//  };
+
+//  Car.prototype.repairCar = function() {
+//       carGood = true;
+//  };
+
+
+//  Baby
+//  function Baby(name, age) {
+//     Person.call(this, name, age); 
+//   }
+
+//   Baby.prototype = Object.create(Person.prototype);
+  
+//   Baby.prototype.play = function () {
+//     return `Plays all day`;
+//   }
+
+//   var baby = new Baby('Sonny', 2 ); 
+
+
+
+  
+  
+
+// 2. Your goal is to refactor all of this code to use ES6 Classes. The console.log() statements should still return what is expected of them.
+
 //Person Class
 
 class Person {
-  constructor(name2, age2) {
-    this.name = name2;
-    this.age = age2;
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
     this.stomach = [];
   }
 
@@ -45,29 +90,6 @@ class Person {
   }
 }
 
-
-Car
-function Car (modelName, carMake) {
-  this.model = modelName;
-  this.make = carMake;
-  this.odometer = 0;
-  carGood = true;
-}
-
-Car.prototype.drive = function(distance) {
-    if (carGood == true){
-      return this.odometer += distance;
-    } 
-    return `I crashed at ${this.odometer} miles!`;
-};
-
- Car.prototype.carCrash = function() {
-       carGood = false;
- };
-
- Car.prototype.repairCar = function() {
-      carGood = true;
- };
 
 // Car class
 
@@ -95,20 +117,15 @@ class Car {
   }
 };
 
+// Baby Class
 
- //Baby
- function Baby(name, age) {
-    Person.call(this, name, age); 
-  }
-
-  Baby.prototype = Object.create(Person.prototype);
+class Baby extends Person{
+    constructor (name,age){
+      super(name,age);
+    }
   
-  Baby.prototype.play = function () {
+  play() {
     return `Plays all day`;
   }
 
-  var baby = new Baby('Sonny', 2 ); 
-  
-
-// 2. Your goal is to refactor all of this code to use ES6 Classes. The console.log() statements should still return what is expected of them.
-
+};
